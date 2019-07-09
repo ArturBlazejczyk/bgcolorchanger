@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg {
+    height: 100vh;
+    background-color: lightgrey;
+    transition: 1s;
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}
+
+div.blue {
+    position: absolute;
+    background-color: blue;
+    bottom: 32px;
+    left: 32px;
+}
+
+div.blue:hover~.bg {
+    background-color: blue;
+}
+
+div.green {
+    position: absolute;
+    background-color: green;
+    top: 32px;
+    right: 32px;
+}
+
+div.green:hover~.bg {
+    background-color: green;
+}
+
+div.orange {
+    position: absolute;
+    background-color: orange;
+    bottom: 32px;
+    right: 32px;
+}
+
+div.orange:hover~.bg {
+    background-color: orange;
+}
+
+div.red {
+    position: absolute;
+    background-color: red;
+    top: 32px;
+    left: 32px;
+}
+
+div.red:hover~.bg {
+    background-color: red;
+}
+
+div.red:hover~div p.red, div.green:hover~div p.green, div.blue:hover~div p.blue, div.orange:hover~div p.orange {
+    opacity: 1;
+}
+
+p {
+    position: absolute;
+    color: #fff;
+    font-size: 50px;
+    font-family: arial;
+    transition: 1s;
+    text-transform: uppercase;
+    line-height: 100vh;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
